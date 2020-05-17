@@ -4,7 +4,7 @@ import cx from 'classnames';
 import './feed.scss';
 
 function Feed(props) {
-    const { news, onUpvote } = props;
+    const { news, votes, onUpvote } = props;
     return (
         <div 
             className={cx(
@@ -23,11 +23,11 @@ function Feed(props) {
                 "font-bold": news.num_comments > 100,
                })}
             >{news.num_comments}</p>
-           <p className="w-1/6 text-center">{news.votes || 0}</p>
+           <p className="w-1/6 text-center">{votes || 0}</p>
            <div className="w-1/6 items-center flex justify-center">
                <div 
                     className="Upvote"
-                    onClick={() => onUpvote(news.datakey)}
+                    onClick={() => onUpvote(news.objectID)}
                ></div>
             </div>
            <div className="w-2/5">
@@ -40,10 +40,12 @@ function Feed(props) {
 
 Feed.propTypes = {
     news: PropTypes.shape({}),
+    votes: PropTypes.number,
 };
 
 Feed.defaultProps = {
     news: [],
+    votes: 0,
 };
 
 export default Feed;
