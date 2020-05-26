@@ -4,4 +4,5 @@
     </a>
 </div>
 
-- Debounce Logic Added
+- Suggestions for story tags.
+- Debounce Logic Added.
