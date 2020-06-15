@@ -6,4 +6,6 @@
 
 - Suggestions for story tags.
 - Debounce Logic Added.
-- Search and Debounce
+- Search and Debounce.
+- Real time graphs.
+- Change graphs based on the tags input
